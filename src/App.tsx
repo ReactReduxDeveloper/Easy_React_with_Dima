@@ -1,22 +1,23 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Rating from "./Star";
-import Accordion from "./Accordion/Accordion";
+import Rating from "./components/Rating/Star";
+import Accordion from "./components/Accordion/Accordion";
 import {stringify} from "querystring";
-import OnOff from "./OnOff/OnOff";
-import UncontrolledAccordion from "./Accordion/UncontrolledAccordion";
-import UncontrolledRating from "./Star";
+import OnOff from "./components/OnOff/OnOff";
+import UncontrolledAccordion from "./components/Accordion/UncontrolledAccordion";
+import UncontrolledRating from "./components/Rating/Star";
 
 
 const App = () => {
     return (
         <div className={"App"}>
+          {/*  <OnOff/>
             <OnOff/>
             <OnOff/>
-            <OnOff/>
+*/}
 
-            <UncontrolledRating />
+
             <UncontrolledAccordion titleValue={"Menu"}/>
             <UncontrolledAccordion titleValue={"Users"}/>
 
