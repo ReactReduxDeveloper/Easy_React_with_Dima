@@ -11,15 +11,16 @@ import {RatingProps, RatingValueType, UncontrolledRating} from "./components/Rat
 
 const App = () => {
     let [Tvalue, setValue] = useState<RatingValueType>(0)
+    let [Newcollapsed, setNewCollapsed] = useState<boolean>(true)
+    let [Switch, setSwitch] = useState<boolean>(true)
     return (
         <div className={"App"}>
-            <OnOff/>
-            <OnOff/>
-            <OnOff/>
+            <OnOff on={Switch} setSwitch={setSwitch}/>
+
 
             <UncontrolledRating Tvalue={Tvalue} OnClick={setValue}/>
 
-            <UncontrolledAccordion titleValue={"Menu"}/>
+            <UncontrolledAccordion titleValue={"Menu"} collapsed={Newcollapsed} onChange={ () => {setNewCollapsed(!Newcollapsed)}}/>
 
 
         </div>
